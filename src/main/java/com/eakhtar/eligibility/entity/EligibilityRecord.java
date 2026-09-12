@@ -13,6 +13,7 @@ public class EligibilityRecord {
     private String memberId;
     private String planTier;
     private boolean active;
+    private String lastVerifiedDate;
 
     public Long getId() { return id; }
     public String getMemberId() { return memberId; }
@@ -21,4 +22,6 @@ public class EligibilityRecord {
     public void setPlanTier(String planTier) { this.planTier = planTier; }
     public boolean isActive() { return active; }
     public void setActive(boolean active) { this.active = active; }
+    public String getLastVerifiedDate() { return lastVerifiedDate; }
+    public void setLastVerifiedDate(String lastVerifiedDate) { this.lastVerifiedDate = lastVerifiedDate; }
 }
