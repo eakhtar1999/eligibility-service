@@ -1,7 +1,7 @@
 package com.eakhtar.eligibility.controller;
 
 import com.eakhtar.eligibility.model.EligibilityResponse;
-// import com.eakhtar.eligibility.service.EligibilityService;
+import com.eakhtar.eligibility.service.EligibilityService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
