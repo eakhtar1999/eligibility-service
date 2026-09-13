@@ -1,1 +1,16 @@
 # CVE-XXXX-XXXXX - accepted, reason: <fill in when a real one appears>
+
+# usr/bin/pebble - Canonical Pebble service manager, bundled directly into
+# eclipse-temurin:21-jre by its maintainers (not installed via apt, not an
+# application dependency). Findings are in the Go stdlib it was compiled
+# against. No fix available from this repo - requires either a Temurin
+# base image rebuild (same tag, picked up automatically on next build) or
+# a base image change. Reviewed 2026-09-13.
+CVE-2026-33818
+CVE-2026-39821
+CVE-2026-46600
+CVE-2026-56853
+CVE-2026-56858
+CVE-2026-56859
+CVE-2026-56860
+CVE-2026-56862
