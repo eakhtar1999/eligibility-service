@@ -5,7 +5,7 @@
 # application dependency). Findings are in the Go stdlib it was compiled
 # against. No fix available from this repo - requires either a Temurin
 # base image rebuild (same tag, picked up automatically on next build) or
-# a base image change. Reviewed 2026-09-13.
+# a base image change. Reviewed 2026-09-13. it is to triage deliberately
 CVE-2026-33818
 CVE-2026-39821
 CVE-2026-46600
