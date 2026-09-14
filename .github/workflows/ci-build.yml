@@ -133,8 +133,9 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: Cache dependency-check database
-        uses: actions/cache@v4
+      - name: Restore dependency-check database
+        id: depcheck-cache-restore
+        uses: actions/cache/restore@v4
         with:
           path: ~/.m2/repository/org/owasp/dependency-check-data
           key: ${{ runner.os }}-depcheck-db
@@ -143,3 +144,10 @@ jobs:
         env:
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
         run: mvn -B org.owasp:dependency-check-maven:check -DnvdApiKey="$NVD_API_KEY"
+
+      - name: Save dependency-check database
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: ~/.m2/repository/org/owasp/dependency-check-data
+          key: ${{ runner.os }}-depcheck-db

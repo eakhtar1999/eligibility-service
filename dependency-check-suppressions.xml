@@ -1,2 +1,9 @@
 <suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+    <suppress>
+        <notes>Accepted risk: 2.0.3 is the latest angus-activation version published on Maven
+        Central as of 2026-09-14 - no fixed version exists yet. Transitive via jaxb-runtime
+        (spring-boot-starter-web). Revisit when a newer release is available.</notes>
+        <packageUrl regex="true">^pkg:maven/org\.eclipse\.angus/angus\-activation@.*$</packageUrl>
+        <cve>CVE-2025-7962</cve>
+    </suppress>
 </suppressions>
