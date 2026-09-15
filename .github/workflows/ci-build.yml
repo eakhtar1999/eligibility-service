@@ -96,7 +96,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Cache SonarCloud packages
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.sonar/cache
           key: ${{ runner.os }}-sonar
@@ -147,7 +147,7 @@ jobs:
 
       - name: Restore dependency-check database
         id: depcheck-cache-restore
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         with:
           path: ~/.m2/repository/org/owasp/dependency-check-data
           key: ${{ runner.os }}-depcheck-db
@@ -159,7 +159,7 @@ jobs:
 
       - name: Save dependency-check database
         if: always()
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6
         with:
           path: ~/.m2/repository/org/owasp/dependency-check-data
           key: ${{ runner.os }}-depcheck-db
